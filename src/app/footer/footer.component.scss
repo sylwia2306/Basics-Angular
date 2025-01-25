@@ -1,0 +1,118 @@
+// Zmienne kolorów
+$primary-color: #333;
+$secondary-color: #f4f4f4;
+$link-hover-color: #ff6600;
+$footer-background-color: #222;
+$footer-text-color: #fff;
+
+footer {
+  background-color: $footer-background-color;
+  color: $footer-text-color;
+  padding: 2rem 0;
+  text-align: center;
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    
+    .footer-logo {
+      flex: 1;
+      h3 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      
+      p {
+        font-size: 1rem;
+        font-weight: 300;
+      }
+    }
+    
+    .footer-links {
+      flex: 1;
+      ul {
+        list-style: none;
+        padding: 0;
+        
+        li {
+          margin: 10px 0;
+          
+          a {
+            color: $secondary-color;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            
+            &:hover {
+              color: $link-hover-color;
+            }
+          }
+        }
+      }
+    }
+    
+    .footer-social {
+      flex: 1;
+      ul {
+        list-style: none;
+        padding: 0;
+        
+        li {
+          display: inline-block;
+          margin: 0 10px;
+          
+          .social-icon {
+            color: $secondary-color;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+            
+            &:hover {
+              color: $link-hover-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: $footer-text-color;
+    background-color: $primary-color;
+    padding: 10px 0;
+  }
+}
+
+// Styl responsywny dla mniejszych ekranów
+@media (max-width: 768px) {
+  footer {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+      
+      .footer-logo, .footer-links, .footer-social {
+        flex: unset;
+        margin-bottom: 20px;
+      }
+      
+      .footer-links ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      
+      .footer-social ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+    }
+  }
+}
