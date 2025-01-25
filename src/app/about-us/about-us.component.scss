@@ -1,0 +1,63 @@
+// Zmienne kolorów
+$primary-color: #333;
+$secondary-color: #f4f4f4;
+$highlight-color: #ff6600;
+
+.about-us {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: $secondary-color;
+
+  .about-content {
+    flex: 1;
+    padding: 0 20px;
+    max-width: 600px;
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $primary-color;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: $primary-color;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+  }
+
+  .about-image {
+    flex: 1;
+    padding: 0 20px;
+    text-align: center;
+
+    img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+// Styl responsywny dla mniejszych ekranów
+@media (max-width: 768px) {
+  .about-us {
+    flex-direction: column;
+    text-align: center;
+
+    .about-content, .about-image {
+      flex: unset;
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .about-image img {
+      width: 80%;
+    }
+  }
+}
